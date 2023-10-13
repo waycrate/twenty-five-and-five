@@ -1,0 +1,10 @@
+[package]
+name = "twenty-five-and-five"
+authors = ["Soc Virnyl Estela <socvirnyl.estela@uncomfyhalomacro.pl>"]
+description = "Times your work in twenty-five minutes, gives you a break for five minutes. Optional relaxation for 15 minutes. Sounds familiar?"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
