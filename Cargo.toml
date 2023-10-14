@@ -1,10 +1,26 @@
 [package]
 name = "twenty-five-and-five"
+homepage = "https://codeberg.org/uncomfyhalomacro/twenty-five-and-five"
+repository = "https://codeberg.org/uncomfyhalomacro/twenty-five-and-five"
 authors = ["Soc Virnyl Estela <socvirnyl.estela@uncomfyhalomacro.pl>"]
 description = "Times your work in twenty-five minutes, gives you a break for five minutes. Optional relaxation for 15 minutes. Sounds familiar?"
 version = "0.1.0"
 edition = "2021"
+license = "MPL-2.0"
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+# Our binary
+default-run = "t25t5"
 
 [dependencies]
+chrono = { version = "0.4.23", default-features = false, features = ["clock"] }
+dirs = "4.0.0"
+iced = { version = "0.10.0", features = ["tokio", "lazy", "advanced", "image"] }
+iced_aw = { version = "0.7.0", features = ["tabs", "modal", "card"], default-features = false }
+iced_native = "0.10.0"
+native-dialog = "0.6.3"
+notify-rust = { version = "4", optional = true }
+tracing = { version = "^0.1.37", features = [
+    "max_level_trace",
+    "release_max_level_debug",
+] }
+tracing-subscriber = { version = "0.3.17", features = ["env-filter"] }
