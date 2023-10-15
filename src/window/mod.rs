@@ -163,7 +163,21 @@ impl Application for Pomodoro {
     }
 
     fn view(&self) -> Element<Self::Message> {
-        let button_state = text(format!("{}", self.mode)).size(40);
+        const MINUTE: u64 = 60;
+        const HOUR: u64 = 60 * MINUTE;
+
+        let seconds = match self.mode {
+            PomodoroState::WorkTwentyFive(d)
+            | PomodoroState::BreakFive(d)
+            | PomodoroState::FifteenRelax(d) => d.as_secs(),
+        };
+
+        let duration = text(format!(
+            "{:0>2}:{:0>2}",
+            (seconds % HOUR) / MINUTE,
+            seconds % MINUTE,
+        ))
+        .size(50);
 
         let button = |label| {
             button(text(label).horizontal_alignment(alignment::Horizontal::Center))
@@ -200,7 +214,7 @@ impl Application for Pomodoro {
 
         let mode_controls = row![work_button, break_button, relax_button,];
 
-        let content = column![button_state, controls, mode_controls]
+        let content = column![duration, controls, mode_controls]
             .align_items(Alignment::Center)
             .spacing(20);
 
