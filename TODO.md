@@ -1,22 +1,29 @@
 # It's a simple app but it's in iced-rs
 
+NOTE to self: *Check stopwatch example*
+
 ## Our first goal of course is creating a window
 
-- [ ] Creating the main window
+- [X] Creating the main window
 
 ## Then create the buttons and display window for the time
 
 - [ ] Buttons
-  - [ ] Start
-  - [ ] Pause
-  - [ ] Reset
+  - [X] Start
+  - [X] Pause
+  - [X] Reset
   - [ ] Edit
-- [ ] Display Window
-  - [ ] Left
-  - [ ] Middle
-  - [ ] Right
+- [X] Display Window
+  - [X] Left
+  - [X] Middle
+  - [X] Right
 
 ## Then notifications
 
-- [ ] Notify for Starting
-- [ ] Notify for Finished
+- [X] Notify for Starting
+- [X] Notify for Finished
+
+# Timer
+
+- [X] Pause and start
+- [X] Store remaining seconds if paused

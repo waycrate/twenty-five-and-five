@@ -12,13 +12,11 @@ license = "MPL-2.0"
 default-run = "t25t5"
 
 [dependencies]
-chrono = { version = "0.4.23", default-features = false, features = ["clock"] }
-dirs = "4.0.0"
-iced = { version = "0.10.0", features = ["tokio", "lazy", "advanced", "image"] }
+iced = { version = "0.10.0", features = ["smol"] }
 iced_aw = { version = "0.7.0", features = ["tabs", "modal", "card"], default-features = false }
 iced_native = "0.10.0"
 native-dialog = "0.6.3"
-notify-rust = { version = "4", optional = true }
+notify-rust = { version = "4", optional = false }
 tracing = { version = "^0.1.37", features = [
     "max_level_trace",
     "release_max_level_debug",
