@@ -53,13 +53,13 @@ impl fmt::Display for PomodoroState {
 
         let state_str: String = match self {
             PomodoroState::WorkTwentyFive(_) => {
-                format!("Working ({})", duration)
+                format!("Work ({})", duration)
             }
             PomodoroState::BreakFive(_) => {
-                format!("Taking a break ({})", duration)
+                format!("Break ({})", duration)
             }
             PomodoroState::FifteenRelax(_) => {
-                format!("Relaxing ({})", duration)
+                format!("Relax ({})", duration)
             }
         };
         write!(f, "{}", state_str)
