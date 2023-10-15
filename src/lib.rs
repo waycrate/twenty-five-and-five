@@ -23,6 +23,5 @@
 #![deny(clippy::manual_let_else)]
 #![allow(clippy::unreachable)]
 
-mod inform;
 pub mod timer;
 pub mod window;
