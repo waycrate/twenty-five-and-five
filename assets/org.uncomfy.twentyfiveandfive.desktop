@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Twenty Five and Five
+Comment=It is just pomodoro
+Categories=System;Utility
+Exec=/home/uncomfy/.local/bin/t25t5
+Icon=pomodoro-indicator
+Keywords=distrobox;
+Terminal=false
+TryExec=/usr/bin/distrobox
+Type=Application
