@@ -100,9 +100,6 @@ impl Application for Pomodoro {
                                 self.mode =
                                     PomodoroState::WorkTwentyFive(d - Duration::from_secs(1));
                             } else {
-                                self.mode =
-                                    PomodoroState::BreakFive(Duration::from_secs_f64(300.0));
-                                self.state = TimeState::Idle;
                                 Notification::new()
                                     .appname(APPLICATION_ID)
                                     .summary(format!("{}", self.mode).as_str())
@@ -110,6 +107,9 @@ impl Application for Pomodoro {
                                     .icon("alarm-clock")
                                     .show()
                                     .expect("Failed to notify");
+                                self.mode =
+                                    PomodoroState::BreakFive(Duration::from_secs_f64(300.0));
+                                self.state = TimeState::Idle;
                             };
                         }
                         PomodoroState::BreakFive(d) => {
@@ -117,9 +117,6 @@ impl Application for Pomodoro {
                             if !d.is_zero() {
                                 self.mode = PomodoroState::BreakFive(d - Duration::from_secs(1));
                             } else {
-                                self.mode =
-                                    PomodoroState::WorkTwentyFive(Duration::from_secs_f64(300.0));
-                                self.state = TimeState::Idle;
                                 Notification::new()
                                     .appname(APPLICATION_ID)
                                     .summary(format!("{}", self.mode).as_str())
@@ -127,6 +124,9 @@ impl Application for Pomodoro {
                                     .icon("alarm-clock")
                                     .show()
                                     .expect("Failed to notify");
+                                self.mode =
+                                    PomodoroState::WorkTwentyFive(Duration::from_secs_f64(300.0));
+                                self.state = TimeState::Idle;
                             };
                         }
                         PomodoroState::FifteenRelax(d) => {
@@ -134,9 +134,6 @@ impl Application for Pomodoro {
                             if !d.is_zero() {
                                 self.mode = PomodoroState::FifteenRelax(d - Duration::from_secs(1));
                             } else {
-                                self.mode =
-                                    PomodoroState::WorkTwentyFive(Duration::from_secs_f64(300.0));
-                                self.state = TimeState::Idle;
                                 Notification::new()
                                     .appname(APPLICATION_ID)
                                     .summary(format!("{}", self.mode).as_str())
@@ -144,6 +141,9 @@ impl Application for Pomodoro {
                                     .icon("alarm-clock")
                                     .show()
                                     .expect("Failed to notify");
+                                self.mode =
+                                    PomodoroState::WorkTwentyFive(Duration::from_secs_f64(300.0));
+                                self.state = TimeState::Idle;
                             };
                         }
                     };
