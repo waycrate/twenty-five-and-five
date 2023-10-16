@@ -278,7 +278,7 @@ pub fn settings() -> iced::window::Settings {
             application_id: APPLICATION_ID.to_string(),
         },
         size: (540, 540),
-        max_size: Some((720, 720)),
+        max_size: None,
         min_size: Some((300, 300)),
         ..Default::default()
     }
