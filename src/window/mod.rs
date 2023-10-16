@@ -104,6 +104,7 @@ impl Application for Pomodoro {
                                     PomodoroState::BreakFive(Duration::from_secs_f64(300.0));
                                 self.state = TimeState::Idle;
                                 Notification::new()
+                                    .appname(APPLICATION_ID)
                                     .summary(format!("{}", self.mode).as_str())
                                     .body("Work Done 🫂")
                                     .icon("alarm-clock")
@@ -120,6 +121,7 @@ impl Application for Pomodoro {
                                     PomodoroState::WorkTwentyFive(Duration::from_secs_f64(300.0));
                                 self.state = TimeState::Idle;
                                 Notification::new()
+                                    .appname(APPLICATION_ID)
                                     .summary(format!("{}", self.mode).as_str())
                                     .body("Break Done 🥖")
                                     .icon("alarm-clock")
@@ -136,6 +138,7 @@ impl Application for Pomodoro {
                                     PomodoroState::WorkTwentyFive(Duration::from_secs_f64(300.0));
                                 self.state = TimeState::Idle;
                                 Notification::new()
+                                    .appname(APPLICATION_ID)
                                     .summary(format!("{}", self.mode).as_str())
                                     .body("Relaxation Done 🔫")
                                     .icon("alarm-clock")
