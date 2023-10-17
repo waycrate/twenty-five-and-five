@@ -14,7 +14,7 @@ default-run = "t25t5"
 [dependencies]
 iced = { version = "0.10.0", features = ["smol"] }
 iced_aw = { version = "0.7.0", features = ["tabs", "modal", "card"], default-features = false }
-iced_native = "0.10.0"
+iced_runtime = "0.1.1"
 native-dialog = "0.6.3"
 notify-rust = { version = "4", optional = false }
 tracing = { version = "^0.1.37", features = [
