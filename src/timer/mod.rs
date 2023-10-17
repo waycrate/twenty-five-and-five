@@ -24,14 +24,14 @@
 #![allow(clippy::unreachable)]
 
 use std::fmt;
-use std::time::{Duration, Instant};
+use std::time::Instant;
 
 /// Set states for setting the time
 #[derive(Debug, Clone)]
 pub enum PomodoroState {
-    WorkTwentyFive(Duration),
-    BreakFive(Duration),
-    FifteenRelax(Duration),
+    WorkTwentyFive(u64),
+    BreakFive(u64),
+    FifteenRelax(u64),
 }
 
 impl fmt::Display for PomodoroState {
@@ -41,7 +41,7 @@ impl fmt::Display for PomodoroState {
         let seconds = match self {
             PomodoroState::WorkTwentyFive(d)
             | PomodoroState::BreakFive(d)
-            | PomodoroState::FifteenRelax(d) => d.as_secs(),
+            | PomodoroState::FifteenRelax(d) => d,
         };
 
         let duration = format!(
@@ -82,7 +82,7 @@ pub enum TimeState {
 impl Default for Pomodoro {
     fn default() -> Self {
         Self {
-            mode: PomodoroState::WorkTwentyFive(Duration::from_secs_f64(1500.into())),
+            mode: PomodoroState::WorkTwentyFive(1500),
             state: TimeState::Idle,
         }
     }
