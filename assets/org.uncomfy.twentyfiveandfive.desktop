@@ -2,7 +2,7 @@
 Name=Twenty Five and Five
 Comment=It is just pomodoro
 Categories=System;Utility
-Exec=t25t5
+Exec=twenty-five-and-five
 Icon=pomodoro-indicator
 Keywords=distrobox;
 Terminal=false

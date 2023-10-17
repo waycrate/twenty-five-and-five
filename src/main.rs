@@ -25,7 +25,7 @@
 
 use iced::Application;
 use tracing_subscriber::EnvFilter;
-use twenty_five_and_five as t25t5;
+use twenty_five_and_five as t25a5;
 
 fn main() -> iced::Result {
     let filter_layer = EnvFilter::try_from_default_env().unwrap_or_else(|_| EnvFilter::new("info"));
@@ -37,8 +37,8 @@ fn main() -> iced::Result {
 
     tracer.init();
     // Create a new application
-    t25t5::timer::Pomodoro::run(iced::Settings {
-        window: t25t5::window::settings(),
+    t25a5::timer::Pomodoro::run(iced::Settings {
+        window: t25a5::window::settings(),
         ..Default::default()
     })
 }

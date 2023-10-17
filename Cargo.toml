@@ -9,7 +9,7 @@ edition = "2021"
 license = "MPL-2.0"
 
 # Our binary
-default-run = "t25t5"
+default-run = "twenty-five-and-five"
 
 [dependencies]
 iced = { version = "0.10.0", features = ["smol"] }
