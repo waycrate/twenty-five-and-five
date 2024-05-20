@@ -106,6 +106,7 @@ impl Application for Pomodoro {
                                     .summary(format!("{}", self.mode).as_str())
                                     .body("Work Done 🫂")
                                     .icon("alarm-clock")
+                                    .sound_name("/usr/share/sounds/freedesktop/stereo/alarm-clock-elapsed.oga")
                                     .show()
                                     .expect("Failed to notify");
                                 self.mode = PomodoroState::BreakFive(300);
@@ -122,6 +123,7 @@ impl Application for Pomodoro {
                                     .summary(format!("{}", self.mode).as_str())
                                     .body("Break Done 🥖")
                                     .icon("alarm-clock")
+                                    .sound_name("/usr/share/sounds/freedesktop/stereo/alarm-clock-elapsed.oga")
                                     .show()
                                     .expect("Failed to notify");
                                 self.mode = PomodoroState::WorkTwentyFive(1500);
@@ -138,6 +140,7 @@ impl Application for Pomodoro {
                                     .summary(format!("{}", self.mode).as_str())
                                     .body("Relaxation Done 🔫")
                                     .icon("alarm-clock")
+                                    .sound_name("/usr/share/sounds/freedesktop/stereo/alarm-clock-elapsed.oga")
                                     .show()
                                     .expect("Failed to notify");
                                 self.mode = PomodoroState::WorkTwentyFive(1500);
